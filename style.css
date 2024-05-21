@@ -1,0 +1,395 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    --yellow: #ddb130;
+    --white: #ffffff;
+    --pupple: #362a84;
+    --width: 428px;
+    font-family: "poppins";
+}
+body {
+    width: 100vw;
+    height: 100vw;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#container {
+    width: 428px;
+    height: 926px;
+    border-radius: 50px;
+    background-color: slateblue;
+    margin: 0 20px;
+    background-image: linear-gradient(
+        #1a2440,
+        #2b3164,
+        #433b8d,
+        #6046a7,
+        #7840a3
+    );
+    color: var(--white);
+}
+
+#container .statusBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 427px;
+    height: 48px;
+    color: var(--white);
+}
+#container .statusBar .leftSide {
+    margin: 0 40px;
+}
+#container .statusBar .leftSide #timeStyles {
+    font-size: 19px;
+    font-weight: 600;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#container .statusBar .rightSide {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    margin: 0 20px;
+}
+#container .statusBar .rightSide #cellular {
+}
+#container .statusBar .rightSide #wifi {
+}
+#container .statusBar .rightSide #battery {
+}
+#startFrame {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#startFrame .logoApp {
+    width: 428px;
+    height: 428px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#startFrame .logoApp img {
+    width: 100%;
+}
+
+#startFrame .nameApp {
+    width: 429px;
+    height: 154px;
+    line-height: 120.5%;
+    letter-spacing: -0.37px;
+    font-size: 74px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+#startFrame .nameApp .weather {
+    color: #ffffff;
+    width: fit-content;
+}
+#startFrame .nameApp .foreCasts {
+    color: var(--yellow);
+    width: fit-content;
+}
+#startFrame .ButtonApp {
+    width: 304px;
+    height: 72px;
+    line-height: 72px;
+    border-radius: 50px;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: var(--pupple);
+    background-color: var(--yellow);
+}
+#startFrame .ButtonApp:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#centerFrame {
+    width: var(--width);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#centerFrame .detailWeather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#centerFrame .detailWeather .imageWeather {
+    width: 50%;
+}
+#centerFrame .detailWeather .imageWeather img {
+    width: 100%;
+}
+
+#centerFrame .detailWeather .temperature {
+    font-size: 64px;
+    line-height: 29.7px;
+    letter-spacing: 0.47px;
+    margin: 20px 0;
+    font-style: Medium;
+}
+#centerFrame .detailWeather .nameOfCity {
+    font-size: 24px;
+    font-style: Regular;
+    font-family: Poppins;
+}
+#detailFrame .detailWeather .nameOfCity {
+    font-size: 24px;
+    font-style: Regular;
+    margin-top: 46px;
+    font-family: Poppins;
+}
+#centerFrame .detailWeather .TempeRange {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#detailFrame .detailWeather .TempeRange {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 46px;
+    font-size: 24px;
+}
+#centerFrame .detailWeather .TempeRange .max {
+    margin: 0 0;
+}
+#detailFrame.detailWeather .TempeRange .max {
+    margin: 4px 10px;
+}
+#centerFrame .detailWeather .TempeRange .min {
+    margin: 0;
+}
+#detailFrame .detailWeather .TempeRange .min {
+    margin: 4px 10px;
+}
+#centerFrame .imageOfHouse {
+    width: 336px;
+    height: 198px;
+}
+#centerFrame .imageOfHouse .imgHouse {
+    width: 100%;
+}
+#centerFrame .frameToday {
+    background-color: var(--pupple);
+    background-image: linear-gradient(
+        to top right,
+        rgba(157, 82, 172, 70%),
+        #3e2d8f
+    );
+    border-radius: 30px;
+    width: 428px;
+    height: 246px;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 25%);
+}
+.frameToday .timeSession {
+    margin: 12px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-family: Open Sans;
+    font-weight: 600;
+}
+
+.frameToday .horizoneLine {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 0.5px;
+    display: block;
+}
+
+.frameToday .TempeList,
+#detailFrame .tempeList {
+    margin: 26px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.frameToday .TempeList .dayTemple,
+#detailFrame .tempeList .dayTemple {
+    width: 66px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    font-weight: 500;
+}
+.dayTemple .temperature {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+.dayTemple .cloudImage {
+    margin: 10px 0;
+    width: fit-content;
+}
+.dayTemple .timeline,
+#detailFrame .dayTemple .timelineDay {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+#centerFrame .navigationBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 24px;
+}
+#centerFrame .navigationBar .iconNavi {
+    margin: 0 40px;
+}
+#centerFrame .navigationBar .iconNavi:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+#detailFrame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#detailFrame .sevenDays {
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+}
+#detailFrame .sevenDays .titleOf7D {
+    margin-left: 40px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-family: Open Sans;
+    font-weight: bold;
+    text-align: start;
+}
+#detailFrame .sevenDays .itemOf7D {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#detailFrame .sevenDays .directerLeft,
+#detailFrame .sevenDays .directerRight {
+    margin: 0 6px;
+}
+#detailFrame .sevenDays .tempeList {
+    margin: 0;
+}
+#detailFrame .sevenDays .directerLeft {
+    rotate: 180deg;
+}
+#detailFrame .sevenDays .tempeList .dayTemple {
+    background-image: linear-gradient(to bottom, #3e2d8f, #8e78c8);
+    border-radius: 50px;
+    margin: 4px 4px;
+    height: 172px;
+    width: 82px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#detailFrame .bigcard {
+    width: 352px;
+    height: 174px;
+    border-radius: 20px;
+    background-color: var(--pupple);
+    background-image: linear-gradient(
+        to top right,
+        rgba(157, 82, 172, 70%),
+        #3e2d8f
+    );
+    margin-top: 34px;
+    box-shadow: 2px 2px 2px 2px rgba(80, 78, 78, 25%);
+}
+#detailFrame .fields {
+    font-size: 16px;
+    font-family: Open Sans;
+    font-weight: 400;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 16px 10px;
+    color: rgba(255, 255, 255, 0.75);
+}
+#detailFrame .fields img {
+    margin-right: 6px;
+}
+
+#detailFrame .titles {
+    font-size: 28px;
+    font-family: Open Sans;
+    font-weight: 700;
+    margin: 12px 10px;
+    text-align: start;
+}
+#detailFrame .horizoneLine {
+    margin: 14px 10px;
+    background-image: linear-gradient(to right, #805bca, #362a84);
+    height: 4px;
+    display: block;
+}
+#detailFrame .seeMore {
+    font-size: 18px;
+    margin-top: 16px;
+    margin-left: 12px;
+    margin-right: 12px;
+    font-family: Open Sans;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#detailFrame .seeMore img {
+    margin-right: 12px;
+}
+#detailFrame .twocards {
+    width: 352px;
+    height: 174px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 44px;
+}
+
+#detailFrame .twocards .items {
+    width: 161px;
+    height: 150px;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 25%);
+    border: 1px solid #f7cbfd;
+    background-image: linear-gradient(to top right, #9d52ac, #3e2d8f);
+}
+#detailFrame .navigationBar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+#detailFrame .navigationBar:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+#detailFrame .navigationBar img {
+}
